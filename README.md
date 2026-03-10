@@ -54,7 +54,7 @@ Playbook publishes practical career advice for people working in tech or trying 
 | `tech-interviews-1` | El Meta Cambió Pt.1 / The Meta Changed Pt.1 | Series |
 | `tech-interviews-2` | El Meta Cambió Pt.2 / The Meta Changed Pt.2 | Series |
 | `tech-interviews-3` | El Meta Cambió Pt.3 / The Meta Changed Pt.3 | Series |
-| `tech-roles-teens` | ¿En qué trabajas? / What Do You Even Do? | Standalone |
+| `tech-roles` | ¿En qué trabajas? / What Do You Even Do? | Standalone |
 
 **Adding a post:**
 1. Create `docs/{slug}.es.md` and `docs/{slug}.en.md`
@@ -103,8 +103,8 @@ playbook-site/
 │   ├── job-market.en.md
 │   ├── tech-interviews-{1,2,3}.es.md
 │   ├── tech-interviews-{1,2,3}.en.md
-│   ├── tech-roles-teens.es.md
-│   └── tech-roles-teens.en.md
+│   ├── tech-roles.es.md
+│   └── tech-roles.en.md
 ├── CNAME                   # playbook.neorgon.com
 ├── robots.txt
 └── sitemap.xml

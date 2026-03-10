@@ -6,7 +6,7 @@
 
 Vivimos en un mundo donde cada empresa — del banco al restaurant de la esquina — funciona sobre plataformas digitales. Esas plataformas no se hacen solas: las construyen y mantienen personas, en distintos roles, con distintas habilidades.
 
-Hasta que los clankers nos quiten el trabajo, alguien tiene que hacerlo. Y ese alguien podrías ser tú.
+Hasta que los **clankers** nos quiten el trabajo, alguien tiene que hacerlo. Y ese alguien podrías ser tú.
 
 No es el manual del programador. Es una guía para entender qué hace cada persona del equipo, usando ejemplos de algo que probablemente ya conoces: los videojuegos.
 
@@ -38,7 +38,7 @@ Excepto que no es un edificio real. Todo pasa virtualmente. Cierras el computado
 
 Nada de esto es un proyecto de fin de semana. Cada rol en esta lista requiere años para conocerlo de verdad. Piénsalo menos como una escalera de carrera y más como un Lego donde la caja es enorme y nadie te mostró el resultado final. Cada cosa que aprendes te permite conectar más piezas. Hay gente que lleva veinte años construyendo y todavía encuentra secciones que no ha tocado.
 
-Y sobre los clankers: no nos van a liberar de babysittear sistemas grandes. Al contrario. Cuanto más automatizadas y complejas se vuelven las cosas, más necesitan personas que entiendan qué está pasando. Va a haber trabajo. La pregunta es solo de qué parte del edificio quieres ser responsable.
+Y sobre los **clankers**: no nos van a liberar de babysittear sistemas grandes. Al contrario. Cuanto más automatizadas y complejas se vuelven las cosas, más necesitan personas que entiendan qué está pasando. Va a haber trabajo. La pregunta es solo de qué parte del edificio quieres ser responsable.
 
 ---
 

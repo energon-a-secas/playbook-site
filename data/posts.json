@@ -3,6 +3,7 @@
     {
       "type": "post",
       "slug": "job-market",
+      "category": { "es": "Cómo entrar", "en": "Getting In" },
       "title": { "es": "Cómo salir al mundo laboral", "en": "How to Break Into Tech" },
       "subtitle": { "es": "Cosas que habías querido preguntar, pero preferiste no hacerlo", "en": "Things you wanted to ask but never did" },
       "excerpt": { "es": "Cómo encontrar tu primer trabajo en tech, construir credibilidad desde cero y navegar ese primer año sin perderte en el intento.", "en": "How to land your first tech job, build credibility from zero, and navigate that first year without losing your way." },
@@ -12,6 +13,7 @@
     {
       "type": "series",
       "seriesId": "tech-interviews",
+      "category": { "es": "Entrevistas", "en": "Interviews" },
       "title": { "es": "El Meta Cambió", "en": "The Meta Changed" },
       "subtitle": { "es": "Guía completa para entrevistas técnicas en inglés", "en": "A complete guide to technical interviews in English" },
       "excerpt": { "es": "Todo lo que necesitas para pasar entrevistas técnicas en inglés: preparación mental, fases del proceso y referencia de preguntas Cloud/DevOps.", "en": "Everything you need to pass technical interviews in English: mindset, process phases, and a Cloud/DevOps question reference." },
@@ -25,7 +27,8 @@
     },
     {
       "type": "post",
-      "slug": "tech-roles-teens",
+      "slug": "tech-roles",
+      "category": { "es": "Los roles", "en": "The Roles" },
       "title": { "es": "¿En qué trabajas?", "en": "What Do You Even Do?" },
       "subtitle": { "es": "Roles tech explicados con ejemplos de gaming", "en": "Tech jobs explained with gaming examples" },
       "excerpt": { "es": "Qué hace realmente un desarrollador, un DevOps o un ingeniero de datos, explicado con analogías de videojuegos que cualquiera puede entender.", "en": "What a developer, DevOps engineer, or data engineer actually does all day, explained with gaming analogies anyone can understand." },
@@ -77,7 +80,7 @@
       "prevSlug": "tech-interviews-2",
       "nextSlug": null
     },
-    "tech-roles-teens": {
+    "tech-roles": {
       "title": { "es": "¿En qué trabajas?", "en": "What Do You Even Do?" },
       "subtitle": { "es": "Roles tech explicados con ejemplos de gaming", "en": "Tech jobs explained with gaming examples" },
       "series": null,

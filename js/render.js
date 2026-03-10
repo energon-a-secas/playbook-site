@@ -1,13 +1,62 @@
 // ── Render ────────────────────────────────────────────────────
 import { escHtml } from './utils.js';
 
-/** Render all cards into #posts-grid. */
+/** Render all cards into #posts-grid grouped as section columns. */
 export function renderCards(cards, lang) {
   const grid = document.getElementById('posts-grid');
   if (!grid) return;
-  grid.innerHTML = cards.map(card =>
-    card.type === 'series' ? renderSeriesCard(card, lang) : renderPostCard(card, lang)
-  ).join('');
+
+  // Group cards into columns by category
+  const columns = [];
+  let current = null;
+
+  for (const card of cards) {
+    const cat = card.category;
+    const label = cat ? escHtml(cat[lang] || cat.es) : null;
+
+    if (!current || (label && label !== current.label)) {
+      current = { label, cards: [] };
+      columns.push(current);
+    }
+    current.cards.push(card);
+  }
+
+  grid.innerHTML = columns.map(col => {
+    const header = col.label
+      ? `<div class="section-divider" role="presentation">
+          <span class="section-divider-label">${col.label}</span>
+        </div>`
+      : '';
+    const cardHtml = col.cards.map(card =>
+      card.type === 'series' ? renderSeriesCard(card, lang) : renderPostCard(card, lang)
+    ).join('');
+    return `<div class="section-column">${header}<div class="section-cards">${cardHtml}</div></div>`;
+  }).join('');
+}
+
+/** Render hero topic pills with hover preview into #hero-topics. */
+export function renderHeroTopics(cards, lang) {
+  const container = document.getElementById('hero-topics');
+  if (!container) return;
+
+  container.innerHTML = cards.map(card => {
+    const cat    = card.category ? escHtml(card.category[lang] || card.category.es) : '';
+    const title  = escHtml(card.title[lang] || card.title.es);
+    const excerpt = card.excerpt ? escHtml(card.excerpt[lang] || card.excerpt.es) : '';
+    const url    = card.type === 'series'
+      ? `/post/?slug=${card.parts[0].slug}`
+      : `/post/?slug=${card.slug}`;
+
+    return `
+      <a href="${url}" class="hero-topic" aria-label="${cat}">
+        <span class="hero-topic-cat">${cat}</span>
+        <span class="hero-topic-arrow" aria-hidden="true">→</span>
+        <div class="hero-topic-preview" role="tooltip" aria-hidden="true">
+          <p class="hero-preview-title">${title}</p>
+          ${excerpt ? `<p class="hero-preview-excerpt">${excerpt}</p>` : ''}
+        </div>
+      </a>`;
+  }).join('');
 }
 
 function renderPostCard(card, lang) {

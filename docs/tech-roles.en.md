@@ -6,7 +6,7 @@
 
 Every business today — the bank, the airline, the coffee shop app on your phone — runs on digital platforms. Those platforms don't build themselves: they're built and maintained by people, in different roles, with different skills.
 
-Until the clankers take our jobs, someone has to do it. And that someone could be you.
+Until the **clankers** take our jobs, someone has to do it. And that someone could be you.
 
 This isn't a programming manual. It's a guide to understanding what each person on a tech team actually does, using examples from something you probably already know: video games.
 
@@ -38,7 +38,7 @@ Except none of it is a real building. It all happens virtually. You close your l
 
 None of this is a weekend project. Every role on this list takes years to actually know. Think of it less like a career ladder and more like a Lego set where the box is enormous and nobody showed you the full picture. Each thing you learn lets you connect more pieces. Some people spend twenty years building and still find sections they haven't touched.
 
-And about the *clankers*: they are not going to free anyone from babysitting large systems. If anything, the opposite. The more automated and complex things get, the more they need people who actually understand what's going on. There will be work. The question is just which part of the building you want to be responsible for.
+And about the **clankers**: they are not going to free anyone from babysitting large systems. If anything, the opposite. The more automated and complex things get, the more they need people who actually understand what's going on. There will be work. The question is just which part of the building you want to be responsible for.
 
 ---
 
