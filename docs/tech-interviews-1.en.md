@@ -2,17 +2,17 @@
 
 **Preparation, mindset, and what you need to know before the call.**
 
-A while back I wrote these notes for coworkers. They were an internal guide, semi-informal, on how to prepare for technical interviews with clients in English. I kept them stored away because the context was very specific to the company I was at.
+I wrote these notes a few years back for a group of coworkers. Internal guide, semi-informal — how to prepare for technical interviews with clients in English. I kept them locked away because the context was too specific: one company, one kind of client, one moment in time.
 
-But the meta changed.
+That moment passed.
 
----
+The market shifted in ways that made these notes more relevant, not less. Layoffs, restructurings, companies suddenly hiring internationally. People who had never needed to interview hard finding themselves doing exactly that. And something else became clear in the process: the bar for getting the work done has moved.
 
-The tech market shifted. There were layoffs, restructurings, and suddenly people who had never had to interview in English found themselves looking for work abroad. Or people who were already working internationally but had always been lucky enough to get projects without a heavy selection process.
+Not lowered. Moved. The tooling is better, the resources are everywhere, and most candidates can deliver something functional. You can assume technical competence as a baseline now. What you can't assume is behavior.
 
-So I thought: these notes might help. They're not perfect, they don't cover everything, and some parts are very opinionated. But if you're about to interview in English for a technical role, you'll at least have a foundation.
+That's what separates candidates who land offers from candidates who don't, and it's what most interview prep material ignores entirely. If I had to struggle to communicate with you — if every call was a coordination problem, if you went quiet the moment things got unclear — I'd take any cheap slow clanker over you, any day of the week. Getting the work done is almost a guarantee. Your behavior is the open question.
 
-I originally wrote them in English for a specific corporate context. I've adapted and generalized them to be useful beyond one particular company.
+So the notes stopped being internal. I've adapted and generalized them here. They're opinionated. Some parts won't apply to your situation. But if you're about to interview for a technical role in English, this is what I wish someone had told me before my first one.
 
 This is **Part 1** of a three-part series:
 
@@ -20,15 +20,11 @@ This is **Part 1** of a three-part series:
 - **Part 2:** The interview phases. What happens, when, and how to navigate them.
 - **Part 3:** Technical question reference. Cloud, containers, pipelines, IaC, and more.
 
----
-
 ## Before we start — the disclaimer
 
 I'm not a recruiter. I'm not a career coach. I'm someone from infrastructure/DevOps/CloudOps who has gone through many interviews, given interviews, and prepared people for them. So everything here comes from experience, not from a course.
 
 If something doesn't apply to your situation, ignore it. If something helps, great. If you have a better way of doing something, let me know.
-
----
 
 ## Preparation — what you need to sort out first
 
@@ -62,8 +58,6 @@ I figured out early on that being fully awake and rested gives you more of an ad
 
 Always have your computer configured and ready. Camera, microphone, the video call app they use, all tested beforehand. You don't want to spend the first five minutes of an interview saying "can you hear me?" while hunting for an audio driver.
 
----
-
 ## What you need to know — the general context
 
 Before getting into the interview phases, some things need to be clear. This applies regardless of the level you're applying for.
@@ -82,8 +76,6 @@ My policy is to certify in things I'm actively working with and have enough expe
 
 But this varies by person. If your approach is "I want to learn more about X technology and I'm using this as a challenge to find related work," that's perfectly valid.
 
----
-
 ## Semi-Senior vs Senior — the difference
 
 **At Semi-Senior level:**
@@ -96,8 +88,6 @@ But this varies by person. If your approach is "I want to learn more about X tec
 - You're expected to explain decisions, not just execute tasks.
 - Questions are more open-ended and situational.
 - You'll need to demonstrate judgment, not just knowledge.
-
----
 
 ## English — let's talk about that
 
@@ -115,8 +105,6 @@ This applies both in interviews and in building good relationships with clients.
 - **Digital whiteboards:** Miro, Excalidraw, whatever works.
 - **Grammarly:** can help with your writing as a complementary resource.
 
----
-
 ## Preparation makes the difference
 
 At some point you'll be able to walk into interviews without much preparation. But until then, prepare.
@@ -124,8 +112,6 @@ At some point you'll be able to walk into interviews without much preparation. B
 It's not just about studying. It's about practicing how you talk about your experience. It's about having clear answers to the obvious questions. It's about knowing what you want to convey and having a plan to do it.
 
 The next time someone asks "tell me about yourself" in an interview, you shouldn't be thinking about what to say. You should be choosing which version of your story to tell.
-
----
 
 That covers preparation and mindset. In **Part 2**, we'll get into the interview phases: from the initial pleasantries to the moment the interviewer decides whether they want to work with you or not.
 

@@ -545,6 +545,7 @@ body {
   border-left: 3px solid transparent;
   border-image: linear-gradient(180deg, #34d399 0%, #059669 100%) 1;
   line-height: 1.25;
+  scroll-margin-top: 88px;
 }
 .post-content h3 {
   font-size: var(--text-xl);
