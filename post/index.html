@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook</title>
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#040714">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": { "@type": "Organization", "name": "Neorgon", "url": "https://neorgon.com/" }
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header-bar">
+    <div class="header-logo">
+      <a href="https://ehq.cl/" target="_blank" rel="noopener noreferrer">
+        <img src="../energon-classic-logo.png" class="header-logo-img" alt="Logo">
+      </a>
+      <div>
+        <a href="/" style="text-decoration:none; color:inherit">
+          <h1>Playbook</h1>
+        </a>
+      </div>
+    </div>
+
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <a class="header-home" href="https://neorgon.com/" title="neorgon.com" aria-label="Neorgon home">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+    </a>
+  </header>
+
+  <main id="main">
+    <!-- Banner -->
+    <div class="post-hero-banner" id="post-hero-banner">
+      <img id="post-banner" src="" alt="" loading="eager">
+      <div class="post-hero-overlay"></div>
+    </div>
+
+    <!-- Post header -->
+    <header class="post-header">
+      <h1 class="post-title" id="post-title"> </h1>
+      <p class="post-subtitle" id="post-subtitle"> </p>
+    </header>
+
+    <!-- Series nav (top) -->
+    <div class="series-nav hidden" id="series-nav" aria-label="Series navigation"></div>
+
+    <!-- Post body: TOC sidebar + content -->
+    <div class="post-layout">
+      <aside class="post-toc-column" id="post-toc-column" aria-label="Table of contents">
+        <nav class="post-toc" id="post-toc"></nav>
+      </aside>
+      <div class="post-container">
+        <article class="post-content" id="post-content" aria-label="Post content">
+          <!-- Rendered by post.js -->
+        </article>
+      </div>
+    </div>
+
+    <!-- Series nav (bottom) -->
+    <div class="series-nav hidden" id="series-nav-bottom" aria-label="Series navigation"></div>
+  </main>
+
+  <footer class="info-footer">
+    Part of <a class="footer-link" href="https://neorgon.com/">Neorgon</a>
+  </footer>
+
+  <!-- marked.js for markdown rendering (loads before the module) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script type="module" src="../js/post.js"></script>
+</body>
+</html>

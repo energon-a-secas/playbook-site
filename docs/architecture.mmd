@@ -1,0 +1,47 @@
+---
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#0f172a"
+    primaryTextColor: "#e2e8f0"
+    primaryBorderColor: "#0063e5"
+    lineColor: "#38bdf8"
+    secondaryColor: "#1e293b"
+    tertiaryColor: "#1e293b"
+    clusterBkg: "#f0f7ff"
+    clusterBorder: "#bfdbfe"
+    edgeLabelBackground: "#e8f0ff"
+    mainBkg: "#0f172a"
+    nodeBorder: "#0063e5"
+    titleColor: "#1e1b4b"
+    fontFamily: "ui-sans-serif, system-ui, -apple-system, sans-serif"
+    fontSize: "13px"
+---
+flowchart TB
+    User([User]) --> Home["index.html\nHomepage"]
+    User --> Post["post/index.html\nPost renderer"]
+
+    subgraph Frontend["ES Modules"]
+        Home --> app["app.js\nEntry point"]
+        Post --> postjs["post.js\nFetch + render markdown"]
+        app & postjs --> state["state.js\nLang preference"]
+        app --> render["render.js\nCard rendering"]
+        app & postjs --> events["events.js\nLang toggle"]
+        app & postjs --> utils["utils.js\nHelpers"]
+    end
+
+    subgraph Data["Static Data"]
+        postjson["data/posts.json\nCard metadata + slug nav"]
+        mdes["docs/*.es.md\nSpanish content"]
+        mden["docs/*.en.md\nEnglish content"]
+        images["docs/images/\nBanner images"]
+    end
+
+    app -->|"fetch"| postjson
+    postjs -->|"fetch"| postjson
+    postjs -->|"fetch /docs/slug.lang.md"| mdes
+    postjs -->|"fetch /docs/slug.lang.md"| mden
+
+    state <-->|"playbook-lang"| Storage[("localStorage")]
+
+    postjs -->|"window.marked.parse()"| Marked["marked.js CDN\nMarkdown renderer"]
