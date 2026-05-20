@@ -1,10 +1,25 @@
 // ── Post page logic ────────────────────────────────────────────
-import { state, loadSaved, save } from './state.js';
+import { state, loadSaved } from './state.js';
 import { setupLangToggle } from './events.js';
 import { escHtml } from './utils.js';
+import {
+  setDocumentLang,
+  findSlugContext,
+  renderBreadcrumbs,
+  renderPostMeta,
+  renderSeriesOutline,
+  mountReadingProgress,
+  mountBackToTop,
+  mountMobileToc,
+  syncMobileToc,
+  countWordsFromMarkdown,
+} from './reading.js';
 
 const params = new URLSearchParams(location.search);
 const slug = params.get('slug');
+
+let postsData = null;
+let slugContext = null;
 
 async function fetchMarkdown(lang) {
   const res = await fetch(`/docs/${slug}.${lang}.md`);
@@ -15,44 +30,66 @@ async function fetchMarkdown(lang) {
 /** Strip the first h1 and optional bold subtitle line — both are shown in the page header. */
 function stripLeadingMeta(md) {
   return md
-    .replace(/^# [^\n]+\n/, '')       // remove first # heading
-    .replace(/^\n+/, '')               // remove leading blank lines
-    .replace(/^\*\*[^\n]+\*\*\n/, '') // remove first **bold-only** subtitle line
-    .replace(/^\n+/, '');              // remove leading blank lines again
+    .replace(/^# [^\n]+\n/, '')
+    .replace(/^\n+/, '')
+    .replace(/^\*\*[^\n]+\*\*\n/, '')
+    .replace(/^\n+/, '');
+}
+
+function smoothScrollToHash(hash) {
+  if (!hash) return;
+  const target = document.querySelector(hash);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 async function renderPost(lang) {
   const el = document.getElementById('post-content');
   if (!el) return;
   el.innerHTML = '<div class="post-loading"><div class="skeleton" style="height:24px;width:60%;margin-bottom:12px"></div><div class="skeleton" style="height:16px;width:90%;margin-bottom:8px"></div><div class="skeleton" style="height:16px;width:80%"></div></div>';
+
+  let md = '';
   try {
-    const md = await fetchMarkdown(lang);
-    el.innerHTML = window.marked.parse(stripLeadingMeta(md));
+    md = await fetchMarkdown(lang);
   } catch {
     const fallback = lang === 'es' ? 'en' : 'es';
     try {
-      const md = await fetchMarkdown(fallback);
-      el.innerHTML = window.marked.parse(stripLeadingMeta(md));
+      md = await fetchMarkdown(fallback);
     } catch {
       el.innerHTML = '<p class="load-error">Post not found.</p>';
+      return;
     }
   }
+
+  el.innerHTML = window.marked.parse(stripLeadingMeta(md));
+
+  const meta = postsData?.slugMeta?.[slug];
+  renderPostMeta(meta, lang, countWordsFromMarkdown(md));
+
   buildToc(lang);
   styleRoleCards();
+
+  if (location.hash) {
+    requestAnimationFrame(() => smoothScrollToHash(location.hash));
+  }
 }
 
 function buildToc(lang) {
   const content = document.getElementById('post-content');
   const tocEl = document.getElementById('post-toc');
   const tocColumn = document.getElementById('post-toc-column');
+  const mobileToggle = document.getElementById('toc-mobile-toggle');
   if (!content || !tocEl) return;
 
   const headings = Array.from(content.querySelectorAll('h2'));
   if (headings.length < 2) {
     tocColumn?.classList.add('toc-hidden');
+    mobileToggle?.classList.add('hidden');
     return;
   }
   tocColumn?.classList.remove('toc-hidden');
+  mobileToggle?.classList.remove('hidden');
 
   headings.forEach((h, i) => {
     h.id = `section-${i}`;
@@ -64,27 +101,41 @@ function buildToc(lang) {
     return `<a class="toc-link" href="#${h.id}">${escHtml(label)}</a>`;
   }).join('');
   tocEl.innerHTML = `<p class="toc-label">${tocHeading}</p>${items}`;
+  syncMobileToc();
 
-  // Show TOC only after the banner scrolls out of view
+  document.getElementById('post-toc-mobile')?.querySelectorAll('.toc-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      smoothScrollToHash(link.getAttribute('href'));
+    });
+  });
+
+  tocEl.querySelectorAll('.toc-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      smoothScrollToHash(link.getAttribute('href'));
+    });
+  });
+
   const bannerEl = document.getElementById('post-hero-banner');
-  if (bannerEl) {
+  if (bannerEl && tocColumn) {
     const bannerWatcher = new IntersectionObserver(
       ([entry]) => tocColumn.classList.toggle('toc-active', !entry.isIntersecting),
       { threshold: 0 }
     );
     bannerWatcher.observe(bannerEl);
   } else {
-    tocColumn.classList.add('toc-active');
+    tocColumn?.classList.add('toc-active');
   }
 
-  // Scroll-based active highlight
   const headingObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const id = entry.target.id;
-      const link = tocEl.querySelector(`[href="#${id}"]`);
-      if (link) link.classList.toggle('active', entry.isIntersecting);
+      document.querySelectorAll(`.toc-link[href="#${id}"]`).forEach(link => {
+        link.classList.toggle('active', entry.isIntersecting);
+      });
     });
-  }, { rootMargin: '-68px 0px -70% 0px' });
+  }, { rootMargin: '-88px 0px -70% 0px' });
 
   headings.forEach(h => headingObserver.observe(h));
 }
@@ -107,7 +158,6 @@ function styleRoleCards() {
 
   paragraphs.forEach(p => {
     const first = p.firstElementChild;
-    // Match paragraphs that start with <strong>Label:</strong>
     if (first?.tagName === 'STRONG' && first.textContent.trim().endsWith(':')) {
       group.push(p);
     } else {
@@ -159,39 +209,70 @@ function applyMeta(meta, lang) {
     bannerEl.onerror = () => bannerEl.closest('.post-hero-banner')?.classList.add('no-image');
   }
   document.title = `${meta.title?.[lang] || slug} — Playbook`;
+
+  const desc = meta.subtitle?.[lang] || meta.subtitle?.es || '';
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) {
+    metaDesc = document.createElement('meta');
+    metaDesc.name = 'description';
+    document.head.appendChild(metaDesc);
+  }
+  metaDesc.content = desc;
+}
+
+function refreshReadingChrome(lang) {
+  cleanupReading();
+  mountReadingProgress();
+  mountBackToTop(lang);
+  mountMobileToc(lang);
 }
 
 async function init() {
   if (!slug) { location.href = '/'; return; }
 
   loadSaved(state);
+  setDocumentLang(state.lang);
   setupLangToggle();
 
-  let postsData = null;
   try {
     const res = await fetch('/data/posts.json');
     postsData = await res.json();
   } catch { /* non-fatal */ }
 
+  slugContext = findSlugContext(postsData, slug);
   const meta = postsData?.slugMeta?.[slug];
-  if (meta) applyMeta(meta, state.lang);
+  if (meta) {
+    meta.slug = slug;
+    applyMeta(meta, state.lang);
+    renderBreadcrumbs(slugContext, meta, state.lang);
+    renderSeriesOutline(slugContext, slug, state.lang);
+    if (meta.series) renderSeriesNav(meta, state.lang);
+  }
 
   await renderPost(state.lang);
-
-  if (meta?.series) renderSeriesNav(meta, state.lang);
+  refreshReadingChrome(state.lang);
 }
 
 document.addEventListener('langchange', async ({ detail }) => {
-  let postsData = null;
+  setDocumentLang(detail.lang);
+
   try {
     const res = await fetch('/data/posts.json');
     postsData = await res.json();
   } catch { /* non-fatal */ }
+
+  slugContext = findSlugContext(postsData, slug);
   const meta = postsData?.slugMeta?.[slug];
-  if (meta) applyMeta(meta, detail.lang);
+  if (meta) {
+    meta.slug = slug;
+    applyMeta(meta, detail.lang);
+    renderBreadcrumbs(slugContext, meta, detail.lang);
+    renderSeriesOutline(slugContext, slug, detail.lang);
+    if (meta.series) renderSeriesNav(meta, detail.lang);
+  }
+
   await renderPost(detail.lang);
-  if (meta?.series) renderSeriesNav(meta, detail.lang);
-  // Scroll to top on lang change so user starts from beginning
+  refreshReadingChrome(detail.lang);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 

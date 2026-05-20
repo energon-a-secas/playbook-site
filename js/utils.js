@@ -1,5 +1,15 @@
 // ── Utilities ─────────────────────────────────────────────────
 
+/** Stable URL fragment from category label (uses Spanish key for consistency). */
+export function slugify(str) {
+  return String(str)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
 export function escHtml(str) {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -21,8 +31,10 @@ export function toast(msg, duration = 2200) {
   }, duration);
 }
 
-/** Estimate reading time in minutes from markdown text. */
-export function readTime(text) {
-  const words = text.trim().split(/\s+/).length;
+/** Estimate reading time in minutes from text or a word count. */
+export function readTime(textOrWords) {
+  const words = typeof textOrWords === 'number'
+    ? textOrWords
+    : textOrWords.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / 200));
 }

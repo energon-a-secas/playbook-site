@@ -10,6 +10,7 @@ export function setupLangToggle() {
     if (lang === state.lang) return;
     state.lang = lang;
     save(state);
+    document.documentElement.lang = lang === 'en' ? 'en' : 'es';
     updateLangButtons();
     document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
   });

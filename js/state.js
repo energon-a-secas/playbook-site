@@ -11,6 +11,7 @@ export function loadSaved(s) {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === 'es' || saved === 'en') s.lang = saved;
   } catch { /* private browsing */ }
+  document.documentElement.lang = s.lang === 'en' ? 'en' : 'es';
 }
 
 export function save(s) {
