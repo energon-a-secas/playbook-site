@@ -119,7 +119,8 @@ export function mountBackToTop(lang) {
 
   window.addEventListener('scroll', toggle, { passive: true });
   btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
   });
   toggle();
   return () => window.removeEventListener('scroll', toggle);

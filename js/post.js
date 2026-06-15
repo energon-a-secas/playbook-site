@@ -36,11 +36,16 @@ function stripLeadingMeta(md) {
     .replace(/^\n+/, '');
 }
 
+const prefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const scrollBehavior = () => (prefersReducedMotion() ? 'auto' : 'smooth');
+
 function smoothScrollToHash(hash) {
   if (!hash) return;
   const target = document.querySelector(hash);
   if (target) {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    target.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
   }
 }
 
@@ -273,7 +278,7 @@ document.addEventListener('langchange', async ({ detail }) => {
 
   await renderPost(detail.lang);
   refreshReadingChrome(detail.lang);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: scrollBehavior() });
 });
 
 init();
