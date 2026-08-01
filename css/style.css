@@ -48,41 +48,6 @@ body {
   flex-direction: column;
 }
 
-/* ── Header ────────────────────────────────────────────────── */
-.header-bar {
-  background: linear-gradient(in oklch 135deg, #B015B0 0%, #3D0080 50%, #040714 100%);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 0 var(--space-6);
-  height: 68px;
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-}
-
-.header-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.header-logo-img {
-  height: 36px; width: auto; flex-shrink: 0;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s var(--ease-snap);
-  display: block;
-}
-.header-logo-img:hover { transform: scale(1.14) rotate(-9deg); }
-.header-logo h1, .header-logo .header-title, .header-title-link h1 {
-  font-size: 1.2em; font-weight: 600; letter-spacing: .5px;
-}
-.header-title-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-.header-title-link:hover .header-title,
-.header-title-link:hover h1 { color: #fff; }
-.header-subtitle { font-size: .82em; color: rgba(255,255,255,.72); font-weight: 500; margin-top: 2px; display: block; }
-
 /* ── Reading progress ──────────────────────────────────────── */
 .reading-progress-track {
   position: fixed;
@@ -106,7 +71,6 @@ body {
   display: flex;
   align-items: center;
   gap: 2px;
-  margin-left: auto;
   background: rgba(255,255,255,.07);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -131,16 +95,6 @@ body {
   background: var(--accent);
   color: #000;
 }
-
-.header-home {
-  display: flex; align-items: center;
-  padding: 5px;
-  color: rgba(255,255,255,0.9); text-decoration: none;
-  border-radius: var(--radius-sm);
-  transition: color var(--dur), background var(--dur); flex-shrink: 0;
-}
-.header-home:hover { color: #fff; background: rgba(255,255,255,0.12); }
-.header-home svg { width: 34px; height: 34px; display: block; }
 
 /* ── Skip link ─────────────────────────────────────────────── */
 .skip-link {
@@ -1121,8 +1075,6 @@ body.toc-open { overflow: hidden; }
 }
 
 @media (max-width: 700px) {
-  .header-bar { padding: 0 var(--space-4); gap: var(--space-3); }
-  .header-logo h1 { font-size: 1em; }
   .hero { padding: var(--space-8) var(--space-4) var(--space-8); }
   .hero-topic-preview { display: none; } /* tooltip doesn't fit on mobile */
   .posts-section { padding: 0 var(--space-4); }
