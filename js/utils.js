@@ -1,3 +1,12 @@
+// Generic helpers come from the DOM Kit (js/neorgon-dom.js, vendored from
+// packages/neorgon-ui/dom/). They are re-exported so every existing
+// `import { escHtml } from './utils.js'` keeps working.
+//
+// Do not edit js/neorgon-dom.js. Edit the canonical source and run
+// packages/neorgon-ui/sync-dom.sh.
+import { escHtml } from './neorgon-dom.js';
+export { escHtml };
+
 // ── Utilities ─────────────────────────────────────────────────
 
 /** Stable URL fragment from category label (uses Spanish key for consistency). */
@@ -10,13 +19,6 @@ export function slugify(str) {
     .replace(/(^-|-$)/g, '');
 }
 
-export function escHtml(str) {
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
 
 export function toast(msg, duration = 2200) {
   const el = Object.assign(document.createElement('div'), {
