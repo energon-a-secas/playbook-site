@@ -1,4 +1,4 @@
-# El Meta Cambió — Parte 3
+# El Meta Cambió: Parte 3
 
 **Lo que te pueden preguntar en una entrevista de Cloud/DevOps/Infra.**
 
@@ -18,7 +18,7 @@ No voy a cubrir todo. Si cubriera todo, esto no sería un post, sería un libro.
 
 ---
 
-## Las preguntas clásicas — que siempre van a estar
+## Las preguntas clásicas: que siempre van a estar
 
 ### "Tell me about your experience"
 
@@ -48,7 +48,7 @@ La variante del "most challenging project" es para ver cómo performas y abordas
 
 ---
 
-## Arquitectura — el panorama general
+## Arquitectura: el panorama general
 
 Las preguntas de arquitectura te pueden caer desde múltiples ángulos. Las tareas de migración te dan mucha experiencia en este tema.
 
@@ -65,7 +65,7 @@ De ahí salen preguntas derivadas como "qué load balancer usarías si tengo una
 
 ---
 
-## Cloud Provider — la lógica es estándar
+## Cloud Provider: la lógica es estándar
 
 No importa si es AWS, GCP, o Azure. La lógica detrás es estándar. Voy a usar terminología de AWS porque es el más común, pero los conceptos aplican a todos.
 
@@ -98,7 +98,7 @@ No importa si es AWS, GCP, o Azure. La lógica detrás es estándar. Voy a usar 
 
 ---
 
-## Infrastructure as Code — el clásico
+## Infrastructure as Code: el clásico
 
 ### CloudFormation
 
@@ -118,7 +118,7 @@ Las preguntas de Lambda rara vez son triviales. Es más probable que te pregunte
 
 ---
 
-## Containers — el pan de cada día
+## Containers: el pan de cada día
 
 ### Comandos y conceptos
 
@@ -145,7 +145,7 @@ Las preguntas de Lambda rara vez son triviales. Es más probable que te pregunte
 
 ---
 
-## Pipelines — CI/CD
+## Pipelines: CI/CD
 
 - Cómo automatizar tareas cotidianas. Explica tu approach.
 - Tipos de releases (blue-green, canary, rolling update).
@@ -156,7 +156,7 @@ Las preguntas de Lambda rara vez son triviales. Es más probable que te pregunte
 
 ---
 
-## Automatización IaC — el detalle
+## Automatización IaC: el detalle
 
 ### Terraform
 
@@ -181,7 +181,7 @@ Si puedes responder estas sin googlear, estás bien.
 
 ---
 
-## Seguridad — el add-on a todo lo anterior
+## Seguridad: el add-on a todo lo anterior
 
 Esto no es una categoría separada en el sentido de que te van a hacer un bloque de preguntas de seguridad. Es más un:
 

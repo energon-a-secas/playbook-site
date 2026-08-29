@@ -4,7 +4,7 @@
 
 *If you've ever tried to explain your job to a family member and got "oh, so you fix computers" in response, this post is for them. And also for you, if you're still figuring out where you want to end up in tech.*
 
-Every business today — the bank, the airline, the coffee shop app on your phone — runs on digital platforms. Those platforms don't build themselves: they're built and maintained by people, in different roles, with different skills.
+Every business today: the bank, the airline, the coffee shop app on your phone, runs on digital platforms. Those platforms don't build themselves: they're built and maintained by people, in different roles, with different skills.
 
 Until the **clankers** take our jobs, someone has to do it. And that someone could be you.
 
@@ -32,7 +32,7 @@ Most people begin as developers. Not because it's the only valid path, but becau
 
 There's a real difference in what each feels like. Developers are closer to toy makers: you build things that other people actually use and interact with. You see the result. If that idea appeals to you, pay attention to that instinct. Infra and cloud work is different. It's less about building from scratch and more about connecting what exists and keeping it running.
 
-A building is a decent way to picture the whole thing. At the top, a Cloud or Dev Architect is like the architect who designs the structure — how many floors, how the space is organized, what the platform can actually support. The stores and offices inside are built by developers. Someone in mid-level infra works on specific parts of the construction: the wiring for one floor, a particular system, a defined scope. And at the lower levels, the job is keeping the building standing. Lights on, systems up, nothing failing quietly overnight. That role doesn't get talked about much, but it's the reason everything else can exist.
+A building is a decent way to picture the whole thing. At the top, a Cloud or Dev Architect is like the architect who designs the structure, how many floors, how the space is organized, what the platform can actually support. The stores and offices inside are built by developers. Someone in mid-level infra works on specific parts of the construction: the wiring for one floor, a particular system, a defined scope. And at the lower levels, the job is keeping the building standing. Lights on, systems up, nothing failing quietly overnight. That role doesn't get talked about much, but it's the reason everything else can exist.
 
 Except none of it is a real building. It all happens virtually. You close your laptop and the thing you spent the day building is just running somewhere, on a server you've never seen, in a datacenter on another continent. At some point every person in this field stares at a screen and wonders if any of it is real. That's the existential crisis. It comes with the job. Welcome.
 
@@ -48,7 +48,7 @@ When a game ships, there are hundreds of people behind it. Nobody says "they all
 
 ---
 
-## Frontend Developer — The art and UI team
+## Frontend Developer: The art and UI team
 
 In a game, the frontend is everything you see: the menus, the icons, the level-up animations, the HUD with your health and mana bars. If it looks good or bad, if the button responds or lags, if the loading screen looks professional: that was the frontend's call.
 
@@ -62,7 +62,7 @@ In the real world: they build the websites and apps you use. If a button is wher
 
 ---
 
-## Backend Developer — The game engine
+## Backend Developer: The game engine
 
 The backend is what you don't see. In a game, it's the engine calculating physics, combat rules, the experience points you get from killing a mob. When you press "attack" and the game figures out if you missed or landed a crit, that's the backend.
 
@@ -76,7 +76,7 @@ In the real world: they build the logic behind apps. When you create an account,
 
 ---
 
-## DevOps / Platform Engineer — The MMO ops team
+## DevOps / Platform Engineer: The MMO ops team
 
 In an MMO, someone has to keep the servers running 24/7. When there's massive lag or a server goes down, there are people who detect it and fix it, ideally before you even notice. They also make sure that deploying an update doesn't take the game down.
 
@@ -90,7 +90,7 @@ In the real world: they automate and maintain the infrastructure that keeps apps
 
 ---
 
-## Cloud / Infrastructure Engineer — The game's datacenter
+## Cloud / Infrastructure Engineer: The game's datacenter
 
 Similar to DevOps but more focused on designing the infrastructure itself. If DevOps keeps the servers running, the Cloud Engineer decides how they should be configured, in how many regions, at what cost, and with what level of security.
 
@@ -102,7 +102,7 @@ Similar to DevOps but more focused on designing the infrastructure itself. If De
 
 ---
 
-## QA Engineer — The professional playtester
+## QA Engineer: The professional playtester
 
 Game studios have entire teams playing a game before launch, looking for bugs. It's not just "playing for free": documenting exactly what steps reproduce each bug, under what conditions it fails, and verifying that the dev's fix actually worked.
 
@@ -116,7 +116,7 @@ In the real world: same thing but for software. They test features, find edge ca
 
 ---
 
-## Security Engineer — The anti-cheat team
+## Security Engineer: The anti-cheat team
 
 In online games, the anti-cheat team finds exploits before players do. And when players find them anyway, they work to patch them. They also have to make sure the anti-cheat isn't so aggressive it bans legitimate players.
 
@@ -130,7 +130,7 @@ In the real world: they find vulnerabilities in systems and apps before hackers 
 
 ---
 
-## Data Engineer / Data Analyst — The balance team
+## Data Engineer / Data Analyst: The balance team
 
 In competitive games, teams constantly watch statistics: which character has the highest win rate, which weapon is being over-used, where on the map most players die. That's how they balance the game.
 
@@ -144,7 +144,7 @@ In the real world: same thing but with business data. How many users drop off at
 
 ---
 
-## Machine Learning / AI Engineer — The NPC programmer
+## Machine Learning / AI Engineer: The NPC programmer
 
 NPCs with "intelligent" behavior are programmed. The StarCraft 2 bots that play better than humans, the pathfinding enemies that flank you, the recommendation systems that suggest your next game: all of that is ML/AI.
 
@@ -158,7 +158,7 @@ In the real world: they build systems that learn from data. Spotify and Netflix 
 
 ---
 
-## Product Manager — The game designer
+## Product Manager: The game designer
 
 The game designer doesn't program the game, but decides what goes in it. What mechanics it has, how the resource economy works, what order tutorials are presented. They work with all teams and hold the complete product vision.
 
@@ -172,7 +172,7 @@ In the real world: the PM decides which features get built, in what order, for w
 
 ---
 
-## Tech Lead / Staff Engineer — The raid captain
+## Tech Lead / Staff Engineer: The raid captain
 
 In many RPGs there's a tank, a healer, a DPS. The Tech Lead is the one who coordinates the group, decides the raid strategy, and when things go wrong is the one who brings order.
 
@@ -184,7 +184,7 @@ Not necessarily the one who codes the most, but the one who makes important tech
 
 ---
 
-## Mobile Developer — The console port
+## Mobile Developer: The console port
 
 When a popular game gets ported to a new platform, it's not just "recompile." There are UX decisions, hardware constraints, different controls, and app stores with their own rules.
 
@@ -200,9 +200,9 @@ In the real world: they build apps for iOS and Android. Can be native (Swift for
 
 ![](/docs/images/tech-roles-2.png)
 
-If something caught your attention, that's your signal. You don't need to know everything upfront. Nobody knew at the start which way they wanted to specialize — and if they tell you they did, they're probably lying. The specialization they ended up in likely didn't even exist when they started.
+If something caught your attention, that's your signal. You don't need to know everything upfront. Nobody knew at the start which way they wanted to specialize, and if they tell you they did, they're probably lying. The specialization they ended up in likely didn't even exist when they started.
 
-One thing you should expect regardless of which path you choose: you will never stop studying. The tools change, the frameworks change, the cloud providers add seventeen new services every quarter. That's not a warning, it's just the job description. The people who do well aren't the ones who already know everything — they're the ones who got comfortable not knowing things yet.
+One thing you should expect regardless of which path you choose: you will never stop studying. The tools change, the frameworks change, the cloud providers add seventeen new services every quarter. That's not a warning, it's just the job description. The people who do well aren't the ones who already know everything. They're the ones who got comfortable not knowing things yet.
 
 What does help: start doing something, anything, related to what interests you. A course, a small project, following people who work in that role. Clarity comes from doing, not from thinking.
 
@@ -214,6 +214,6 @@ What does help: start doing something, anything, related to what interests you. 
 
 Once you have a direction and you're getting closer to actually applying for jobs, the interview process is its own game. It has different rules, different pressure, and most people are completely unprepared the first time.
 
-If that's where you're headed, the next thing worth reading is the interview prep series — it covers how to structure your answers, what to expect in technical rounds, and how to not completely blank when someone asks you to explain your experience in English.
+If that's where you're headed, the next thing worth reading is the interview prep series. It covers how to structure your answers, what to expect in technical rounds, and how to not completely blank when someone asks you to explain your experience in English.
 
 ✌️

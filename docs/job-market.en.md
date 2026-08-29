@@ -44,7 +44,7 @@ One of my first realizations while studying on my own was that I couldn't become
 
 To avoid recommending something that doesn't fit your situation, I split things into three levels:
 
-**Just getting by:** a low-demand job that you could automate yourself out of, but don't want to. You tend to realize later that you didn't actually gain useful experience. Doesn't necessarily mean low pay — I know cases where people were paid well but learned nothing.
+**Just getting by:** a low-demand job that you could automate yourself out of, but don't want to. You tend to realize later that you didn't actually gain useful experience. Doesn't necessarily mean low pay, I know cases where people were paid well but learned nothing.
 
 **Learning:** a normal job where you're at a level that matches your current knowledge base. Pay tends to be market average, and in the best case scenario, you can grow over time.
 
@@ -182,7 +182,7 @@ If I'm honest about a goal I have, it's being able to create a place that meets 
 
 Before I close, a quote I found on the metro on my way home from an event:
 
-> *Ask and it will be given to you; seek and you will find; knock and the door will be opened to you. — Matthew 7:7*
+> *Ask and it will be given to you; seek and you will find; knock and the door will be opened to you., Matthew 7:7*
 
 You can do this.
 

@@ -1,4 +1,4 @@
-# The Meta Changed — Part 3
+# The Meta Changed: Part 3
 
 **What they might ask you in a Cloud/DevOps/Infrastructure interview.**
 
@@ -18,7 +18,7 @@ I'm not going to cover everything. If I covered everything, this wouldn't be a p
 
 ---
 
-## The classic questions — they're always there
+## The classic questions: they're always there
 
 ### "Tell me about your experience"
 
@@ -48,7 +48,7 @@ The "most challenging project" variant is to see how you perform and approach pr
 
 ---
 
-## Architecture — the big picture
+## Architecture: the big picture
 
 Architecture questions can come from multiple angles. Migration work gives you a lot of experience here.
 
@@ -65,7 +65,7 @@ From there come derivative questions like "what load balancer would you use if I
 
 ---
 
-## Cloud Provider — the logic is standard
+## Cloud Provider: the logic is standard
 
 Doesn't matter if it's AWS, GCP, or Azure. The underlying logic is standard. I'll use AWS terminology because it's the most common, but the concepts apply everywhere.
 
@@ -98,7 +98,7 @@ Doesn't matter if it's AWS, GCP, or Azure. The underlying logic is standard. I'l
 
 ---
 
-## Infrastructure as Code — the classic
+## Infrastructure as Code: the classic
 
 ### CloudFormation
 
@@ -118,7 +118,7 @@ Lambda questions are rarely trivial. More likely you'll be asked:
 
 ---
 
-## Containers — the daily bread
+## Containers: the daily bread
 
 ### Commands and concepts
 
@@ -145,7 +145,7 @@ Lambda questions are rarely trivial. More likely you'll be asked:
 
 ---
 
-## Pipelines — CI/CD
+## Pipelines: CI/CD
 
 - How to automate common tasks. Explain your approach.
 - Types of releases (blue-green, canary, rolling update).
@@ -156,7 +156,7 @@ Lambda questions are rarely trivial. More likely you'll be asked:
 
 ---
 
-## IaC Automation — the details
+## IaC Automation: the details
 
 ### Terraform
 
@@ -181,7 +181,7 @@ If you can answer these without googling, you're in good shape.
 
 ---
 
-## Security — the add-on to everything above
+## Security: the add-on to everything above
 
 This isn't a separate category in the sense that they'll give you a dedicated security block of questions. It's more of a:
 

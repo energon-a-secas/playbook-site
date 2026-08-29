@@ -1,4 +1,4 @@
-# The Meta Changed — Part 2
+# The Meta Changed: Part 2
 
 **It's not just what you know. It's how you handle yourself, how you react, and whether people would actually want to work with you.**
 
@@ -16,7 +16,7 @@ I've split what follows into phases, because a technical interview in English is
 
 ---
 
-## Phase One — Getting to know each other
+## Phase One: Getting to know each other
 
 After the pleasantries ("how are you," "nice to meet you," etc.), comes the introduction phase. Usually the interviewer describes the technologies they use and what they're looking for, setting the tone.
 
@@ -32,7 +32,7 @@ This works if your knowledge overlaps at least 50-70% with what they do. It's ha
 
 ---
 
-## Phase Two — What you say is what you'll get
+## Phase Two: What you say is what you'll get
 
 By now you're more comfortable, the nerves have settled, and the interviewer has a sense of what you bring.
 
@@ -44,7 +44,7 @@ The key thing about this phase: the conversation becomes more natural. If you pr
 
 ---
 
-## Bonus Phase — The Feeling
+## Bonus Phase: The Feeling
 
 This is the phase most people ignore. And it's probably where more interviews are won or lost without you even realizing it.
 
@@ -89,7 +89,7 @@ The takeaway: when we solve complex problems or architecture challenges, we show
 
 ---
 
-## Final Phase — The close
+## Final Phase: The close
 
 At this point the interview wraps up and the interviewer will either tell you the next steps or close the door in your face. Either way, everything is a learning experience.
 

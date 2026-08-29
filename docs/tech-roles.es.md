@@ -4,7 +4,7 @@
 
 *Si alguna vez le explicaste a un familiar lo que haces y te respondieron "ah, arreglas computadores", este post es para ellos. Y también para ti, si todavía no tienes claro en qué quieres trabajar.*
 
-Vivimos en un mundo donde cada empresa — del banco al restaurant de la esquina — funciona sobre plataformas digitales. Esas plataformas no se hacen solas: las construyen y mantienen personas, en distintos roles, con distintas habilidades.
+Vivimos en un mundo donde cada empresa: del banco al restaurant de la esquina, funciona sobre plataformas digitales. Esas plataformas no se hacen solas: las construyen y mantienen personas, en distintos roles, con distintas habilidades.
 
 Hasta que los **clankers** nos quiten el trabajo, alguien tiene que hacerlo. Y ese alguien podrías ser tú.
 
@@ -48,7 +48,7 @@ Cuando sale un juego, hay cientos de personas detrás. Nadie dice "todos hacen v
 
 ---
 
-## Frontend Developer — El equipo de arte y UI
+## Frontend Developer: El equipo de arte y UI
 
 En un juego, el frontend es todo lo que ves: los menús, los íconos, las animaciones cuando subes de nivel, el HUD con tu vida y mana. Si algo se ve bien o mal, si el botón responde o no, si la pantalla de carga parece profesional: eso lo decidió el frontend.
 
@@ -62,7 +62,7 @@ En el mundo real: hacen las páginas web y las apps que usas. Si un botón está
 
 ---
 
-## Backend Developer — El motor del juego
+## Backend Developer: El motor del juego
 
 El backend es lo que no ves. En un juego, es el motor que calcula la física, las reglas del combate, los puntos de experiencia que te da matar un mob. Cuando presionas "atacar" y el juego decide si fallaste o conectaste crítico, eso lo hace el backend.
 
@@ -76,7 +76,7 @@ En el mundo real: hacen la lógica detrás de las apps. Cuando creas una cuenta,
 
 ---
 
-## DevOps / Platform Engineer — El equipo de operaciones del MMO
+## DevOps / Platform Engineer: El equipo de operaciones del MMO
 
 En un MMO, alguien tiene que mantener los servidores arriba 24/7. Cuando hay lag masivo o el servidor se cae, hay personas que lo detectan y lo solucionan, idealmente antes de que lo notes tú. También son los que hacen que desplegar una actualización no tumbe el juego.
 
@@ -90,7 +90,7 @@ En el mundo real: automatizan y mantienen la infraestructura que hace que las ap
 
 ---
 
-## Cloud / Infrastructure Engineer — El datacenter del juego
+## Cloud / Infrastructure Engineer: El datacenter del juego
 
 Parecido al DevOps pero más enfocado en el diseño de la infraestructura misma. Si el DevOps mantiene los servidores funcionando, el Cloud Engineer decide cómo deben estar configurados, en cuántas regiones, con cuánto presupuesto, y con qué nivel de seguridad.
 
@@ -102,7 +102,7 @@ Parecido al DevOps pero más enfocado en el diseño de la infraestructura misma.
 
 ---
 
-## QA Engineer — El playtester profesional
+## QA Engineer: El playtester profesional
 
 En los estudios de videojuegos, antes de lanzar un juego hay equipos enteros que lo juegan buscando bugs. No es solo "jugar gratis": documentar exactamente qué pasos reproducen cada bug, en qué condiciones falla, y verificar que el fix del dev efectivamente lo arregló.
 
@@ -116,7 +116,7 @@ En el mundo real: hacen lo mismo para software. Prueban funcionalidades, encuent
 
 ---
 
-## Security Engineer — El equipo anti-cheat
+## Security Engineer: El equipo anti-cheat
 
 En los juegos online, el equipo anti-cheat busca exploits antes de que los jugadores los encuentren. Y cuando alguien los encuentra igual, trabajan para parcharlos. También tienen que balancear que el anti-cheat no sea tan agresivo que banee jugadores legítimos.
 
@@ -130,7 +130,7 @@ En el mundo real: buscan vulnerabilidades en sistemas y apps antes de que lo hag
 
 ---
 
-## Data Engineer / Data Analyst — El equipo de balance
+## Data Engineer / Data Analyst: El equipo de balance
 
 En los juegos competitivos hay equipos que miran estadísticas constantemente: qué personaje tiene más win rate, qué arma está siendo sobre-usada, en qué parte del mapa muere más gente. Con eso balancean el juego.
 
@@ -144,7 +144,7 @@ En el mundo real: hacen lo mismo pero con datos de negocio. Cuántos usuarios ab
 
 ---
 
-## Machine Learning / AI Engineer — El programador de NPCs
+## Machine Learning / AI Engineer: El programador de NPCs
 
 Los NPCs con comportamiento "inteligente" son programados. Los bots de StarCraft 2 que juegan mejor que los humanos, los enemies con pathfinding que te flanquean, los sistemas de recomendación que te sugieren el siguiente juego: todo eso es ML/AI.
 
@@ -158,7 +158,7 @@ En el mundo real: construyen sistemas que aprenden de datos. Los algoritmos de r
 
 ---
 
-## Product Manager — El game designer
+## Product Manager: El game designer
 
 El game designer no programa el juego, pero decide qué va en él. Qué mecánicas tiene, cómo funciona la economía de recursos, en qué orden se presentan los tutoriales. Trabaja con todos los equipos y tiene la visión del producto completo.
 
@@ -172,7 +172,7 @@ En el mundo real: el PM decide qué features se construyen, en qué orden, para 
 
 ---
 
-## Tech Lead / Staff Engineer — El capitán del raid
+## Tech Lead / Staff Engineer: El capitán del raid
 
 En muchos juegos de rol hay un tank, un healer, un DPS. El Tech Lead es quien coordina al grupo, decide la estrategia para el raid, y cuando algo sale mal es quien pone el orden.
 
@@ -184,7 +184,7 @@ No es necesariamente el que codea más, sino quien toma las decisiones técnicas
 
 ---
 
-## Mobile Developer — El port a consola
+## Mobile Developer: El port a consola
 
 Cuando un juego popular se porta a una plataforma nueva, no es solo "recompilar." Hay decisiones de UX, limitaciones de hardware, controles diferentes, y app stores con sus propias reglas.
 

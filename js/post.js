@@ -213,7 +213,7 @@ function applyMeta(meta, lang) {
     bannerEl.alt = meta.title?.[lang] || '';
     bannerEl.onerror = () => bannerEl.closest('.post-hero-banner')?.classList.add('no-image');
   }
-  document.title = `${meta.title?.[lang] || slug} — Playbook`;
+  document.title = `${meta.title?.[lang] || slug}: Playbook`;
 
   const desc = meta.subtitle?.[lang] || meta.subtitle?.es || '';
   let metaDesc = document.querySelector('meta[name="description"]');

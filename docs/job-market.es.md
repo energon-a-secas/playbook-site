@@ -182,7 +182,7 @@ Si he de admitir un sueño, es poder proveer de un lugar que cumpla la condició
 
 Antes de terminar, una frase que me encontré tirada en el metro cuando volvía de un evento:
 
-> *Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá. — Mateo 7:7*
+> *Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá., Mateo 7:7*
 
 Puedes hacerlo.
 

@@ -1,4 +1,4 @@
-# El Meta Cambió — Parte 2
+# El Meta Cambió: Parte 2
 
 **No es solo lo que sabes. Es cómo te manejas, cómo reaccionas, y si te tolerarían en el trabajo.**
 
@@ -16,7 +16,7 @@ Lo que sigue lo dividí en fases, porque una entrevista técnica en inglés no e
 
 ---
 
-## Primera Fase — Conociéndose
+## Primera Fase: Conociéndose
 
 Después de los pleasantries (el "how are you", "nice to meet you", etc.), viene la parte donde se presentan. Generalmente el entrevistador describe las tecnologías que buscan y lo que usan, marcando el tono.
 
@@ -32,7 +32,7 @@ Esto aplica si tu conocimiento calza al menos un 50-70% con lo que ellos hacen. 
 
 ---
 
-## Segunda Fase — Lo que dices es lo que vas a recibir
+## Segunda Fase: Lo que dices es lo que vas a recibir
 
 Ahora que estás más cómodo, los nervios se calman, y el entrevistador sabe qué tienes para ofrecer.
 
@@ -44,7 +44,7 @@ Lo importante de esta fase: la conversación se vuelve más natural. Si preparas
 
 ---
 
-## Bonus Phase — El Feeling
+## Bonus Phase: El Feeling
 
 Esta es la fase que la mayoría ignora. Y es probablemente donde más entrevistas se ganan o se pierden sin que te des cuenta.
 
@@ -89,7 +89,7 @@ La moraleja: cuando resolvemos problemas complejos o desafíos de arquitectura, 
 
 ---
 
-## Fase Final — El cierre
+## Fase Final: El cierre
 
 En este punto la entrevista concluye y el entrevistador te va a decir los próximos pasos o te va a cerrar la puerta en la cara. En cualquier caso, todo es una experiencia de aprendizaje.
 

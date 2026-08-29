@@ -1,4 +1,4 @@
-# El Meta Cambió — Parte 1
+# El Meta Cambió: Parte 1
 
 **Preparación, mentalidad, y lo que tienes que saber antes de sentarte en la call.**
 
@@ -22,7 +22,7 @@ Esta es la **Parte 1** de una serie de tres:
 
 ---
 
-## Antes de seguir — el disclaimer
+## Antes de seguir: el disclaimer
 
 No soy recruiter. No soy career coach. Soy alguien de infraestructura/DevOps/CloudOps que ha pasado por varias entrevistas, las ha dado, y ha preparado gente para darlas. Así que todo esto viene de experiencia, no de un curso.
 
@@ -30,7 +30,7 @@ Si algo no aplica a tu caso, descártalo. Si algo te sirve, genial. Si tienes un
 
 ---
 
-## Preparación — lo que tienes que ordenar antes
+## Preparación: lo que tienes que ordenar antes
 
 Esto suena obvio, pero la cantidad de gente que entra a una entrevista sin preparación previa es increíble. Y no hablo de estudiar 200 páginas de documentación. Hablo de lo básico.
 
@@ -64,7 +64,7 @@ Siempre ten tu computador configurado y listo. Cámara, micrófono, la app de vi
 
 ---
 
-## Lo que tienes que saber — el contexto general
+## Lo que tienes que saber: el contexto general
 
 Antes de entrar en las fases de la entrevista, hay ciertas cosas que debes tener claras. Esto aplica independientemente del nivel al que estés aplicando.
 
@@ -72,7 +72,7 @@ Antes de entrar en las fases de la entrevista, hay ciertas cosas que debes tener
 
 La experiencia práctica con herramientas vale más que el conocimiento general. A nivel semi senior, con saber que algo existe alcanza. A nivel senior, eso es un dado. El conocimiento general viene aparte.
 
-### Certificaciones — la verdad incómoda
+### Certificaciones: la verdad incómoda
 
 Las certificaciones son buenas. Pero a nivel Senior, son suficientes para saltarse las preguntas fáciles. Nada más.
 
@@ -84,7 +84,7 @@ Pero esto varía de persona a persona. Si tu approach es "quiero aprender más d
 
 ---
 
-## Semi Senior vs Senior — la diferencia
+## Semi Senior vs Senior: la diferencia
 
 **A nivel Semi Senior:**
 - Las certificaciones valen como extensión de conocimiento y prueba de que te importa seguir aprendiendo.
@@ -99,7 +99,7 @@ Pero esto varía de persona a persona. Si tu approach es "quiero aprender más d
 
 ---
 
-## El inglés — hablemos de eso
+## El inglés: hablemos de eso
 
 La gente subestima lo que es escuchar a personas comunes que quizás ni siquiera son nativas. Si no te has enfrentado a acentos divertidos, you are in for a treat.
 

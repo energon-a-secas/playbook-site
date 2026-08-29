@@ -1,8 +1,8 @@
-# The Meta Changed — Part 1
+# The Meta Changed: Part 1
 
 **Preparation, mindset, and what you need to know before the call.**
 
-I wrote these notes a few years back for a group of coworkers. Internal guide, semi-informal — how to prepare for technical interviews with clients in English. I kept them locked away because the context was too specific: one company, one kind of client, one moment in time.
+I wrote these notes a few years back for a group of coworkers. Internal guide, semi-informal, how to prepare for technical interviews with clients in English. I kept them locked away because the context was too specific: one company, one kind of client, one moment in time.
 
 That moment passed.
 
@@ -10,7 +10,7 @@ The market shifted in ways that made these notes more relevant, not less. Layoff
 
 Not lowered. Moved. The tooling is better, the resources are everywhere, and most candidates can deliver something functional. You can assume technical competence as a baseline now. What you can't assume is behavior.
 
-That's what separates candidates who land offers from candidates who don't, and it's what most interview prep material ignores entirely. If I had to struggle to communicate with you — if every call was a coordination problem, if you went quiet the moment things got unclear — I'd take any cheap slow clanker over you, any day of the week. Getting the work done is almost a guarantee. Your behavior is the open question.
+That's what separates candidates who land offers from candidates who don't, and it's what most interview prep material ignores entirely. If I had to struggle to communicate with you, if every call was a coordination problem, if you went quiet the moment things got unclear, I'd take any cheap slow clanker over you, any day of the week. Getting the work done is almost a guarantee. Your behavior is the open question.
 
 So the notes stopped being internal. I've adapted and generalized them here. They're opinionated. Some parts won't apply to your situation. But if you're about to interview for a technical role in English, this is what I wish someone had told me before my first one.
 
@@ -20,13 +20,13 @@ This is **Part 1** of a three-part series:
 - **Part 2:** The interview phases. What happens, when, and how to navigate them.
 - **Part 3:** Technical question reference. Cloud, containers, pipelines, IaC, and more.
 
-## Before we start — the disclaimer
+## Before we start: the disclaimer
 
 I'm not a recruiter. I'm not a career coach. I'm someone from infrastructure/DevOps/CloudOps who has gone through many interviews, given interviews, and prepared people for them. So everything here comes from experience, not from a course.
 
 If something doesn't apply to your situation, ignore it. If something helps, great. If you have a better way of doing something, let me know.
 
-## Preparation — what you need to sort out first
+## Preparation: what you need to sort out first
 
 This sounds obvious, but the number of people who walk into an interview completely unprepared is staggering. And I'm not talking about studying 200 pages of documentation. I mean the basics.
 
@@ -58,7 +58,7 @@ I figured out early on that being fully awake and rested gives you more of an ad
 
 Always have your computer configured and ready. Camera, microphone, the video call app they use, all tested beforehand. You don't want to spend the first five minutes of an interview saying "can you hear me?" while hunting for an audio driver.
 
-## What you need to know — the general context
+## What you need to know: the general context
 
 Before getting into the interview phases, some things need to be clear. This applies regardless of the level you're applying for.
 
@@ -66,7 +66,7 @@ Before getting into the interview phases, some things need to be clear. This app
 
 Practical experience with tools is worth more than general knowledge. At semi-senior level, knowing that something exists is enough. At senior level, that's a given. General knowledge comes separately.
 
-### Certifications — the uncomfortable truth
+### Certifications: the uncomfortable truth
 
 Certifications are good. But at the Senior level, they're enough to skip the easy questions. Nothing more.
 
@@ -76,7 +76,7 @@ My policy is to certify in things I'm actively working with and have enough expe
 
 But this varies by person. If your approach is "I want to learn more about X technology and I'm using this as a challenge to find related work," that's perfectly valid.
 
-## Semi-Senior vs Senior — the difference
+## Semi-Senior vs Senior: the difference
 
 **At Semi-Senior level:**
 - Certifications count as an extension of knowledge and proof that you care about continuing to learn.
@@ -89,7 +89,7 @@ But this varies by person. If your approach is "I want to learn more about X tec
 - Questions are more open-ended and situational.
 - You'll need to demonstrate judgment, not just knowledge.
 
-## English — let's talk about that
+## English: let's talk about that
 
 People underestimate what it's like to listen to regular people who might not even be native speakers. If you haven't dealt with interesting accents yet, you are in for a treat.
 
