@@ -20,7 +20,7 @@ Then open http://localhost:8819. It must be served over HTTP. The app is ES modu
 | `js/reading.js` | 171 | `setDocumentLang`, `findSlugContext`, `renderBreadcrumbs`, `renderPostMeta`, `renderSeriesOutline` |
 | `js/render.js` | 125 | `renderCards`, `renderHeroTopics` |
 | `js/app.js` | 54 | none |
-| `js/utils.js` | 41 | `slugify`, `escHtml`, `toast`, `readTime` |
+| `js/utils.js` | 29 | `slugify`, `escHtml`, `readTime` |
 | `js/events.js` | 27 | `setupLangToggle`, `updateLangButtons` |
 | `js/state.js` | 22 | `state`, `loadSaved`, `save` |
 
@@ -40,7 +40,7 @@ Vendored from `packages/neorgon-ui/`: never edit in place, run the sync script i
 
 ## Gotchas
 
-TODO: the non-obvious failures. What broke here before, what looks wrong but is deliberate, what a reasonable change would break. This is the highest-value section, leave it empty rather than filling it with generic advice.
+- Reduced motion sets `transition: none` on every element (`css/style.css`, the fleet rule of 2026-10-16), so `transitionend` never fires for a visitor who asked for it. Code that waits on that event to remove or reveal something needs a timer fallback. This is why the old local `toast()`, which removed its element only on `transitionend`, was deleted rather than kept: it had no callers. For a toast, re-export `showToast` from `./neorgon-dom.js` the way `escHtml` is; it hides on a timer, and the `.toast` / `.toast.visible` styles already match it.
 
 ## Do not touch
 

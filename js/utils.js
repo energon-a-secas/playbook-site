@@ -19,20 +19,6 @@ export function slugify(str) {
     .replace(/(^-|-$)/g, '');
 }
 
-
-export function toast(msg, duration = 2200) {
-  const el = Object.assign(document.createElement('div'), {
-    className: 'toast',
-    textContent: msg,
-  });
-  document.body.appendChild(el);
-  requestAnimationFrame(() => el.classList.add('visible'));
-  setTimeout(() => {
-    el.classList.remove('visible');
-    el.addEventListener('transitionend', () => el.remove(), { once: true });
-  }, duration);
-}
-
 /** Estimate reading time in minutes from text or a word count. */
 export function readTime(textOrWords) {
   const words = typeof textOrWords === 'number'

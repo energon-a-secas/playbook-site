@@ -94,7 +94,7 @@ playbook-site/
 │   ├── state.js            # Language preference + localStorage
 │   ├── render.js           # Card rendering (post + series)
 │   ├── events.js           # Language toggle
-│   └── utils.js            # escHtml, toast, readTime
+│   └── utils.js            # escHtml, slugify, readTime
 ├── data/
 │   └── posts.json          # Card metadata + slug navigation map
 ├── docs/
