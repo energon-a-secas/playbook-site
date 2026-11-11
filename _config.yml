@@ -1,7 +1,9 @@
 # GitHub Pages builds this repo with Jekyll. With no config, Jekyll turns every
 # tracked Markdown file (CLAUDE.md, DESIGN.md, docs/*.md) into a live HTML page
 # on this origin, with no Content-Security-Policy and indexable by search
-# engines. Excluding Markdown keeps the site to what it ships on purpose.
+# engines. Excluding Markdown keeps the site to what it ships on purpose. The
+# posts' sources are Markdown named docs/*.md.txt for that reason: a .txt file
+# is copied as-is, which is what js/post.js fetches.
 #
 # Jekyll 3, which Pages runs, replaces its default exclude list with this one,
 # and Pages only adds CNAME to it, so CNAME and the Jekyll defaults are

@@ -21,8 +21,10 @@ const slug = params.get('slug');
 let postsData = null;
 let slugContext = null;
 
+// Post sources are Markdown named .md.txt: _config.yml keeps every *.md off the site, so a
+// plain .md would 404 in production, and .txt is copied as-is instead of rendered as a page.
 async function fetchMarkdown(lang) {
-  const res = await fetch(`/docs/${slug}.${lang}.md`);
+  const res = await fetch(`/docs/${slug}.${lang}.md.txt`);
   if (!res.ok) throw new Error(res.status);
   return res.text();
 }

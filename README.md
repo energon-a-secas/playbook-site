@@ -41,7 +41,7 @@ Playbook publishes practical career advice for people working in tech or trying 
 - **Bilingual content** -- every post available in Spanish and English, language preference saved to localStorage
 - **Card grid homepage** -- posts and series cards with banner images and a clean reading link
 - **Series navigation** -- multi-part posts link to each other with prev/next controls and progress indicators
-- **Markdown rendering** -- posts written in `.md` files, rendered in-browser via marked.js
+- **Markdown rendering** -- posts written in Markdown (`.md.txt` files), rendered in-browser via marked.js
 - **Zero build step** -- static ES modules, no compilation required
 
 ---
@@ -57,7 +57,7 @@ Playbook publishes practical career advice for people working in tech or trying 
 | `tech-roles` | ¿En qué trabajas? / What Do You Even Do? | Standalone |
 
 **Adding a post:**
-1. Create `docs/{slug}.es.md` and `docs/{slug}.en.md`
+1. Create `docs/{slug}.es.md.txt` and `docs/{slug}.en.md.txt` (Markdown; the `.txt` keeps GitHub Pages serving them as-is, see CLAUDE.md)
 2. Add the card entry to `data/posts.json` under `"cards"`
 3. Add the slug metadata entry to `data/posts.json` under `"slugMeta"`
 4. Add a banner image to `docs/images/` and reference it in posts.json
@@ -99,12 +99,9 @@ playbook-site/
 │   └── posts.json          # Card metadata + slug navigation map
 ├── docs/
 │   ├── images/             # Banner images (user-provided JPGs)
-│   ├── job-market.es.md
-│   ├── job-market.en.md
-│   ├── tech-interviews-{1,2,3}.es.md
-│   ├── tech-interviews-{1,2,3}.en.md
-│   ├── tech-roles.es.md
-│   └── tech-roles.en.md
+│   ├── job-market.{es,en}.md.txt
+│   ├── tech-interviews-{1,2,3}.{es,en}.md.txt
+│   └── tech-roles.{es,en}.md.txt
 ├── CNAME                   # playbook.neorgon.com
 ├── robots.txt
 └── sitemap.xml

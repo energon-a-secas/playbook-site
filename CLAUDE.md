@@ -40,6 +40,8 @@ Vendored from `packages/neorgon-ui/`: never edit in place, run the sync script i
 
 ## Gotchas
 
+- **Post sources end in `.md.txt`, not `.md`.** `_config.yml` excludes every `*.md` so Jekyll does not publish CLAUDE.md or README.md as pages, and from 2026-09-26 (378016b) until 2026-11-11 that also kept `docs/*.md` off the site: `js/post.js` fetched them, got a 404, and every post page was empty in production. Do not narrow the exclude to bring them back: GitHub Pages then serves each one twice, raw and as a rendered, indexable `.html` copy with no CSP. A `.txt` is copied as-is. A new post is `docs/<slug>.es.md.txt` and `docs/<slug>.en.md.txt`.
+- `refreshReadingChrome()` in `js/post.js` runs on load and on every language change, so each `mount*` in `js/reading.js` returns a cleanup that removes every listener it added (one AbortController per mount). Before 2026-11-11 it called a `cleanupReading()` nothing defined, and the reading chrome never mounted.
 - Reduced motion sets `transition: none` on every element (`css/style.css`, the fleet rule of 2026-10-16), so `transitionend` never fires for a visitor who asked for it. Code that waits on that event to remove or reveal something needs a timer fallback. This is why the old local `toast()`, which removed its element only on `transitionend`, was deleted rather than kept: it had no callers. For a toast, re-export `showToast` from `./neorgon-dom.js` the way `escHtml` is; it hides on a timer, and the `.toast` / `.toast.visible` styles already match it.
 
 ## Do not touch
