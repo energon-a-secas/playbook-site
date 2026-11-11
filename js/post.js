@@ -27,7 +27,7 @@ async function fetchMarkdown(lang) {
   return res.text();
 }
 
-/** Strip the first h1 and optional bold subtitle line — both are shown in the page header. */
+/** Strip the first h1 and optional bold subtitle line: both are shown in the page header. */
 function stripLeadingMeta(md) {
   return md
     .replace(/^# [^\n]+\n/, '')
@@ -225,11 +225,18 @@ function applyMeta(meta, lang) {
   metaDesc.content = desc;
 }
 
+/** What the reading chrome's mounts return: each removes the listeners it added. */
+let readingCleanups = [];
+
+function cleanupReading() {
+  readingCleanups.forEach(fn => fn());
+  readingCleanups = [];
+}
+
+/** Mounted on load and again on every language change, so the previous mount is undone first. */
 function refreshReadingChrome(lang) {
   cleanupReading();
-  mountReadingProgress();
-  mountBackToTop(lang);
-  mountMobileToc(lang);
+  readingCleanups = [mountReadingProgress(), mountBackToTop(lang), mountMobileToc(lang)];
 }
 
 async function init() {

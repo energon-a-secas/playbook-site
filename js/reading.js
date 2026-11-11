@@ -102,9 +102,10 @@ export function mountReadingProgress() {
     }
   };
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  const ctl = new AbortController();
+  window.addEventListener('scroll', onScroll, { passive: true, signal: ctl.signal });
   update();
-  return () => window.removeEventListener('scroll', onScroll);
+  return () => ctl.abort();
 }
 
 export function mountBackToTop(lang) {
@@ -117,13 +118,16 @@ export function mountBackToTop(lang) {
     btn.classList.toggle('visible', window.scrollY > 480);
   };
 
-  window.addEventListener('scroll', toggle, { passive: true });
+  // Every listener on one signal: post.js remounts on each language change, and a click
+  // listener left behind would scroll once per mount.
+  const ctl = new AbortController();
+  window.addEventListener('scroll', toggle, { passive: true, signal: ctl.signal });
   btn.addEventListener('click', () => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
-  });
+  }, { signal: ctl.signal });
   toggle();
-  return () => window.removeEventListener('scroll', toggle);
+  return () => ctl.abort();
 }
 
 export function mountMobileToc(lang) {
@@ -144,13 +148,20 @@ export function mountMobileToc(lang) {
     document.body.classList.toggle('toc-open', open);
   };
 
-  toggle.addEventListener('click', () => setOpen(!panel.classList.contains('open')));
-  backdrop?.addEventListener('click', () => setOpen(false));
+  // One signal for all three: a toggle listener left from an earlier mount would open the
+  // panel and the next one would shut it again, so after a language change it never opened.
+  const ctl = new AbortController();
+  const { signal } = ctl;
+  toggle.addEventListener('click', () => setOpen(!panel.classList.contains('open')), { signal });
+  backdrop?.addEventListener('click', () => setOpen(false), { signal });
   panel.addEventListener('click', e => {
     if (e.target.closest('.toc-link')) setOpen(false);
-  });
+  }, { signal });
 
-  return () => setOpen(false);
+  return () => {
+    ctl.abort();
+    setOpen(false);
+  };
 }
 
 /** Clone desktop TOC links into mobile panel. */
